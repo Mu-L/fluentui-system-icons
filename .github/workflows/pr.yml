@@ -55,7 +55,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: 22.x
 
@@ -72,7 +72,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: 22.x
 
@@ -142,7 +142,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: 22.x
 
@@ -202,7 +202,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: 22.x
 
@@ -271,14 +271,14 @@ jobs:
           fi
 
       - name: Upload icon-app build artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: icon-app-build
           path: packages/icon-app/dist/
           retention-days: 3
 
       - name: Upload docsite build artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: docsite-storybook-build
           path: packages/docsite/storybook-static/
